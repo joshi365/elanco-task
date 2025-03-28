@@ -1,39 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Country Data Dashboard
 
-## Getting Started
+This project is a Next.js application built with TypeScript that fetches and displays country data from the REST Countries API.
 
-First, run the development server:
+## Setup Instructions
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  **Clone the repository:**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    ```bash
+    git clone <your-repository-link>
+    cd <repository-directory>
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2.  **Install dependencies:**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    ```bash
+    npm install # or yarn install
+    ```
 
-## Learn More
+3.  **Set up environment variables (if any):**
 
-To learn more about Next.js, take a look at the following resources:
+    * If you need any environment variables, create a `.env.local` file in the root of the project.
+    * Add any necessary variables (e.g., API keys, if you were using a different API or had specific configurations).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4.  **Run the application:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev # or yarn dev
+    ```
 
-## Deploy on Vercel
+5.  **Open your browser:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    * Go to `http://localhost:3000` to view the dashboard.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Additional Notes
 
-
-//npm i --save-dev @types/jest
+* **API Endpoint:** The application uses the following REST API endpoint to fetch country data: `https://restcountries.com/v3.1/all`
+* **Data Handling:**
+    * The application uses TypeScript interfaces to define the structure of the country data. 
+    * Functions are implemented to sort countries by population, filter by region, and search by name or capital.
+* **UI Components:**
+    * Country cards are displayed in a responsive grid layout. 
+    * Each card includes the country's flag, name, capital, population, and region. 
+    * Clicking on a card opens a detailed view with additional information. 
+* **State Management:**
+    * React hooks are used for local state management. 
+    * Context API or Redux is used for global state management (if necessary).
+* **Performance:**
+    * Lazy loading is implemented for country cards. [cite: 16]
+    * Next.js Image component is used for optimized image loading. 
+    * Memoization is used to prevent unnecessary re-renders. 
+* **Advanced Features:**
+    * A custom hook is used for fetching and caching API data (if implemented). 
+    * Server-side rendering (SSR) is implemented for initial page load (if implemented). 
+* **Testing:**
+    * Unit tests are written for utility functions.
+    * Component tests are created using React Testing Library.
+    * Integration tests are implemented for the main page. [cite: 20]
