@@ -44,15 +44,13 @@ This project is a Next.js application built with TypeScript that fetches and dis
     * Clicking on a card opens a detailed view with additional information. 
 * **State Management:**
     * React hooks are used for local state management. 
-    * Context API or Redux is used for global state management (if necessary).
 * **Performance:**
-    * Lazy loading is implemented for country cards. [cite: 16]
+    * Lazy loading is implemented for country cards.
     * Next.js Image component is used for optimized image loading. 
     * Memoization is used to prevent unnecessary re-renders. 
 * **Advanced Features:**
-    * A custom hook is used for fetching and caching API data (if implemented). 
-    * Server-side rendering (SSR) is implemented for initial page load (if implemented). 
+    * A custom hook is used for fetching and caching API data 
 * **Testing:**
     * Unit tests are written for utility functions.
     * Component tests are created using React Testing Library.
-    * Integration tests are implemented for the main page. [cite: 20]
+    * Integration tests are implemented for the main page
